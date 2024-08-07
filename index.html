@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desert39_Project</title>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script>
+    $(function(){
+      // slide
+      setInterval(() => {
+        $('#slide ul').animate({
+          left: "-1920px"
+        },800,function(){
+          $('#slide ul').append($('#slide ul li').eq(0));
+          $('#slide ul').css("left",0);
+        });
+      },4000);
+
+      // menu
+      $('header .main-menu').mouseenter(function(){
+        $(this).find('.sub-menu').stop().slideDown();
+      });
+      $('header .main-menu').mouseleave(function(){
+        $(this).find('.sub-menu').stop().slideUp();
+      });
+
+      //conB slide
+      setInterval(() => {
+        $('.conB-02 ul').animate({
+          left: "-200px",
+          opacity: 0
+        },800,function(){
+          $('.conB-02 ul').append($('.conB-02 ul li').eq(0));
+          $('.conB-02 ul').css("left",0).css("opacity",1);
+        });
+      },4000);
+
+      // conC p
+      $('.conC swiper-slide').mouseenter(function(){
+        $(this).children('p').css("font-weight",700)
+      });
+      $('.conC swiper-slide').mouseleave(function(){
+        $(this).children('p').css("font-weight",500)
+      });
+
+      //conE slide
+      setInterval(()=>{
+        $('.conE .slide').animate({
+          left: "-300px"
+        },4000,function(){
+          $('.conE .slide').append($('.conE .slide li').eq(0));
+          $('.conE .slide').css("left",0);
+        });
+      })
+
+      //conE icon
+      $('.conE .slide li').mouseenter(function(){
+        $(this).find('.icon-box').css("display","block");
+      });
+      $('.conE .slide li').mouseleave(function(){
+        $(this).find('.icon-box').css("display","none");
+      });
+    });
+  </script>
+
+  <!-- fontAswome -->
+  <script src="./js/all.min.js"></script>
+
+  <!-- goole icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- user -->
+  <link rel="stylesheet" href="./css/main.css">
+  <script defer src="./js/custom.js"></script>
+
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- gsap scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- lodash cdm -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- scollMagic cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- gsap scrollToPlugin cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <header>
+    <div class="menu">
+      <a href="javascript:void(0);"><img src="./img/logo.svg" alt="logo" class="logo"></a>
+      <div class="menu2">
+        <div class="user-menu">
+          <ul class="user">
+            <li><a href="javascript:void(0);"><p class="fa-brands fa-instagram"></p></a></li>
+            <li><a href="javascript:void(0);"><p class="fa-brands fa-facebook-f"></p></a></li>
+            <li><a href="javascript:void(0);"><p class="fa-brands fa-youtube"></p></a></li>
+            <li><a href="javascript:void(0);"><p class="fa-brands fa-tiktok"></p></a></li>
+          </ul>
+        </div>
+        <nav>
+          <ul class="main-menu">
+            <li><a href="javascript:void(0);">BRAND</a>
+              <div class="sub-menu">
+                <div class="inner clearFix">
+                  <ul>
+                    <li><a href="javascript:void(0);">소개</a></li>
+                    <li><a href="javascript:void(0);">BI</a></li>
+                    <li><a href="javascript:void(0);">본사</a></li>
+                    <li><a href="javascript:void(0);">오시는 길</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="javascript:void(0);">디저트</a></li>
+                    <li><a href="javascript:void(0);">커피 & 음료</a></li>
+                    <li><a href="javascript:void(0);">MD 상품</a></li>
+                    <li><a href="javascript:void(0);">삼구 수제 도넛</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="javascript:void(0);">매장 찾기</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="javascript:void(0);">이벤트 & 소식</a></li>
+                    <li><a href="javascript:void(0);">공지</a></li>
+                    <li><a href="javascript:void(0);">판매 매장 리스트</a></li>
+                    <li><a href="javascript:void(0);">고객 문의 접수</a></li>
+                  </ul>
+                  <ul>
+                    <li><a href="javascript:void(0);">창업경쟁력</a></li>
+                    <li><a href="javascript:void(0);">인테리어</a></li>
+                    <li><a href="javascript:void(0);">가맹절차</a></li>
+                    <li><a href="javascript:void(0);">제휴제한</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="javascript:void(0);">MENU</a>
+            </li>
+            <li><a href="javascript:void(0);">STORE</a>
+            </li>
+            <li><a href="javascript:void(0);">COMMUNITY</a>
+            </li>
+            <li><a href="javascript:void(0);">FRANCHISE</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+</header>
+<div class="badge">
+  <div class="badge01">
+    <div class="badge01-01">
+      <i class="fa-solid fa-location-dot"></i>
+      <h1>STORE</h1>
+    </div>
+  </div>
+  <div class="badge02">
+    <div class="badge02-02">
+      <i class="fa-regular fa-comment"></i>
+      <h1>KAKAO</h1>
+    </div>
+  </div>
+  <div class="badge03">
+    <div class="badge03-03">
+      <i class="fa-solid fa-arrow-up"></i>
+      <h1>TOP</h1>
+    </div>
+  </div>
+</div>
+<div id="slide">
+  <ul>
+    <li>
+      <a href="#">
+        <div class="textBoxInner">
+          <div class="textBox">
+            <p># DESSERT39</p>
+            <h1>고단백 샌드위치<br>3종 출시!</h1>
+            <h4>신메뉴 샌드위치 3종 출시!</h4>
+          </div>
+        </div>
+        <img src="./img/slide1.jpg" alt="">
+      </a>
+    </li>
+    <li><a href="#">
+      <div class="textBoxInner">
+        <div class="textBox">
+          <p># DESSERT39</p>
+          <h1>설탐무첨가로<br>상큼하고 가볍게<br>즐겨보세요</h1>
+          <h4>신메뉴 설탕 무첨가 과일 슬러시 4종 출시!</h4>
+        </div>
+      </div>
+      <img src="./img/slide2.jpg" alt=""></a></li>
+    <li><a href="#">
+      <div class="textBoxInner">
+        <div class="textBox">
+          <p># DESSERT39</p>
+          <h1>겉은 쫄~깃 속은<br>부드러운 베이글과<br>크림치즈 출시</h1>
+          <h4>베이글 3종에 잘 어울리는 고소하고<br> 부드러운 크림치즈 4종과 함께 즐겨요!</h4>
+        </div>
+      </div>
+      <img src="./img/slide3.jpg" alt=""></a></li>
+    <li><a href="#">
+      <div class="textBoxInner">
+        <div class="textBox">
+          <p># DESSERT39</p>
+          <h1>칼로리와 당 부담<br>없이 가볍고 상큼하게<br>즐겨보세요</h1>
+          <h4>신메뉴 제로칼로리 청사과 탄산수 출시!</h4>
+        </div>
+      </div>
+      <img src="./img/slide4.jpg" alt=""></a></li>
+    <li><a href="#">
+      <div class="textBoxInner">
+        <div class="textBox">
+          <p># DESSERT39</p>
+          <h1>설탕 무 첨가<br>제로슈가 티라미수</h1>
+          <h4>신메뉴 제로슈가티라미수 출시!</h4>
+        </div>
+      </div>
+      <img src="./img/slide5.jpg" alt=""></a></li>
+  </ul>
+</div>
+<div id="container">
+  <h1>INTRODUCTION</h1>
+  <div class="conA scroll-spy">
+    <div class="conA-01">
+      <img src="./img/store_img1.jpg" alt="" class="back-to-position to-right delay-0">
+      <h2 class="back-to-position to-right delay-1">Locations</h2>
+      <p class="back-to-position to-right delay-2">디저트39와 함께<br> 나아가는
+        <strong>가맹점 안내</strong>입니다.</p>
+        <a href="#" class="fadeIn back-to-position to-right delay-3">MORE</a>
+    </div>
+    <div class="conA-02">
+      <img src="./img/competitiveness_img1.jpg" alt="" class="back-to-position to-right delay-0">
+      <h2 class="back-to-position to-right delay-1">Competitive</h2>
+      <p class="back-to-position to-right delay-2">창업 성공으로 이끄는 디저트39의<br>
+        독보적인 <strong>브랜드 경쟁력</strong>을 보여드립니다.</p>
+        <a href="#" class="back-to-position to-right delay-3">MORE</a>
+      </div>
+  </div>
+  <div class="conB scroll-spy">
+    <div class="conB-inner">
+      <div class="conB-01">
+        <h2 class="back-to-position to-right delay-0">DESSERT39<br> BEVERAGE</h2>
+        <p class="back-to-position to-right delay-1">텀블러 지참시 모든 음료<br> 5% ~ 50% 할인제공</p>
+        <a href="" class="back-to-position to-right delay-2">MORE</a>
+      </div>
+      <div class="conB-02">
+        <p class="fa-solid fa-chevron-left left"></p>
+        <ul>
+          <li><a href=""><img src="./img/ICE_65S46riw652865a8_64yA7Jqp65J_6rO17ZmI.png" alt=""><p>딸기라떼</p></a></li>
+          <li><a href=""><img src="./img/ICE_66as7Ja87IOd7LSI7L2U652865a8_67Kk7Yuw_6rO17ZmI.png" alt=""><p>리얼 생초코 라떼</p></a></li>
+          <li><a href=""><img src="./img/ICE_67CU64KY64KY652865a8_64yA7Jqp65J_6rO17ZmI.png" alt=""><p>바나나우유라떼</p></a></li>
+          <li><a href=""><img src="./img/ICE_7J6Q67CU7Lmp7ZSE65287Y6Y_67Kk7Yuw_6rO17ZmI.png" alt=""><p>자바칩 프라페</p></a></li>
+          <li><a href=""><img src="./img/ICE_7LmY7KaI7ZSE66Gc66eI7KWs64W57LCo652865a8_64yA7Jqp65J_6rO17ZmI.png" alt=""><p>치즈 프로마쥬 녹차라떼</p></a></li>
+          <li><a href=""><img src="./img/ICE_7LmY7KaI7ZSE66Gc66eI7KWs7Z2R64u567CA7YGs7Yuw_64yA7Jqp65J_6rO17ZmI.png" alt=""><p>치즈 프로마쥬 흑당 버블티</p></a></li>
+          <li><a href=""><img src="./img/ICE_7LSI7L2U7ZCB652865a8_64yA7Jqp65J_6rO17ZmI.png" alt=""><p>초코 퐁 라떼</p></a></li>
+        </ul>
+        <p class="fa-solid fa-chevron-right right"></p>
+      </div>
+    </div>
+  </div>
+  <div class="conC">
+    <h1>EVENT & NEWS</h1>
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
+    slides-per-view="3">
+    <swiper-slide><img src="./img/thumb-3543165506_1CfiqAsY_1159b5c380b9d62281ca662698fcac95f7511d45_270x410.png" alt=""><p>[2024년 7월 - 8월] 이벤트<br>디저트39 X 사이퍼즈<br>친환경 콜라보 이벤트!</p><p>2024-07-25</p></swiper-slide>
+    <swiper-slide><img src="./img/thumb-3543165506_dtqCPEjF_369ba1cb54467331e5b17e1dc2c0517f315cedd9_270x410.png" alt=""><p>[2024년 8월 신메뉴]<br>저칼로리 딸기 음료 출시!</p><p>2024-08-02</p></swiper-slide>
+    <swiper-slide><img src="./img/thumb-3543165506_hes5AWGj_256954940c95be8a5a28571938aa0aace04b3d65_270x410.png" alt=""><p>[2024년 7월 신메뉴]<br>오레오 쉐이크 3종 출시!</p><p>2024-07-29</p></swiper-slide>
+    <swiper-slide><img src="./img/thumb-3543165506_KJlqgvMQ_66f720f95828fd00e6fe91425f482d0446226fb2_270x410.png" alt=""><p>[2024년 8월 신메뉴] 이벤트<br>저칼로리 & 라이스 슬림<br>요거트 스무디 출시!</p><p>2024-08-02</p></swiper-slide>
+    <swiper-slide><img src="./img/thumb-3543165506_yT5Q4zbd_ec24c5f7de07e85e0ef8d9040accb7ea94543730_270x410.png" alt=""><p>[2024년 8월 신메뉴]<br>피스타치오크림 음료 3종 출시!</p><p>2024-08-02</p></swiper-slide>
+    <swiper-slide><img src="./img/thumb-977819194_eTd6W1cL_56d6db99c596298541ccbf63ab3d3b896490a302_270x410.png" alt=""><p>[2024년 7월 APP 이벤트] 이벤트<br>디저트39 앱 고객 만족도 조사 이벤트</p><p>2024-07-04</p></swiper-slide>
+    <swiper-slide><img src="./img/thumb-977819194_vycATl06_c83d50eb20c45abc2ceb95641733621e3689b333_270x410.png" alt=""><p>[2024년 7월 신메뉴]<br>애사비 탄산수 3종 출시!</p><p>2024-07-18</p></swiper-slide>
+  </swiper-container>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  <a href="">MORE</a>
+  </div>
+  <div class="conD scroll-spy">
+    <h1>DESSERT39 ECO STORY</h1>
+    <div class="conD-01">
+      <div class="conD-01-01">
+        <h4 class="back-to-position to-right delay-0">국내 프랜차이즈중 전 세계 최초
+          유일한<br> 현실적 탄소중립 대안을 실현중인 기업</h4>
+        <h1 class="back-to-position to-right delay-1">우리 지구 살리기 캠페인</h1>
+        <p class="back-to-position to-right delay-2">디저트39는 2027년까지 탄소중립을 위한<br> 다양한 솔루션을 실현해 나갈 계획입니다.</p>
+        <a href="#" class="back-to-position to-right delay-3">MORE</a>
+      </div>
+      <div class="conD-01-02">
+        <div class="conD-img">
+          <img src="./img/se10_esg_bg01_2.jpg" alt="" class="back-to-position to-left delay-0">
+          <h4 class="back-to-position to-left delay-1">디저트39는 2019년부터 현재까지<br>
+            리유저블컵 사용 누적 고객 552만 돌파 !<br>
+            국내 유일 탄소중립 실현</h4>
+          <p class="back-to-position to-left delay-2">디저트39, 국내 프랜차이즈 최초<br>2027년까지 탄소 배출 중립 가능<br><br>
+          디저트39 리유저블컵은 100% 재활용 소재로 만들어<br>리유저블컵이 폐기 후에도<br>버려지지 않고 도시 에너지 등유로 재생되는<br> 친환경 솔루션을 진행중 입니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="conE">
+    <h1>INSTAGRAM</h1>
+    <p>@dessert39_official</p>
+    <a href="#">Follow</a>
+    <ul class="slide">
+      <li><a href="#">
+        <img src="./img/02_2404insta2.jpg" alt="">
+        <div class="icon-box1 icon-box">
+          <i class="fa-regular fa-heart icon"></i>
+          <i class="fa-regular fa-comment icon"></i>
+          <i class="fa-regular fa-paper-plane icon"></i>
+        </div>
+      </a></li>
+      <li><a href="#">
+        <img src="./img/03_2404insta.jpg" alt="">
+        <div class="icon-box2 icon-box">
+          <i class="fa-regular fa-heart icon"></i>
+          <i class="fa-regular fa-comment icon"></i>
+          <i class="fa-regular fa-paper-plane icon"></i>
+        </div>
+      </a></li>
+      <li><a href="#">
+        <img src="./img/04_2404insta.jpg" alt="">
+        <div class="icon-box3 icon-box">
+          <i class="fa-regular fa-heart icon"></i>
+          <i class="fa-regular fa-comment icon"></i>
+          <i class="fa-regular fa-paper-plane icon"></i>
+        </div>
+      </a></li>
+      <li><a href="#">
+        <img src="./img/05_2404insta.jpg" alt="">
+        <div class="icon-box4 icon-box">
+          <i class="fa-regular fa-heart icon"></i>
+          <i class="fa-regular fa-comment icon"></i>
+          <i class="fa-regular fa-paper-plane icon"></i>
+        </div>
+      </a></li>
+      <li><a href="#">
+        <img src="./img/06_2404insta.jpg" alt="">
+        <div class="icon-box5 icon-box">
+          <i class="fa-regular fa-heart icon"></i>
+          <i class="fa-regular fa-comment icon"></i>
+          <i class="fa-regular fa-paper-plane icon"></i>
+        </div>
+      </a></li>
+      <li><a href="#">
+        <img src="./img/07_2404insta.jpg" alt="">
+        <div class="icon-box6 icon-box">
+          <i class="fa-regular fa-heart icon"></i>
+          <i class="fa-regular fa-comment icon"></i>
+          <i class="fa-regular fa-paper-plane icon"></i>
+        </div>
+      </a></li>
+      <li><a href="#">
+        <img src="./img/08_2404insta.jpg" alt="">
+        <div class="icon-box7 icon-box">
+          <i class="fa-regular fa-heart icon"></i>
+          <i class="fa-regular fa-comment icon"></i>
+          <i class="fa-regular fa-paper-plane icon"></i>
+        </div>
+      </a></li>
+      <li><a href="#">
+        <img src="./img/09_2404insta.jpg" alt="">
+        <div class="icon-box8 icon-box">
+          <i class="fa-regular fa-heart icon"></i>
+          <i class="fa-regular fa-comment icon"></i>
+          <i class="fa-regular fa-paper-plane icon"></i>
+        </div>
+      </a></li>
+    </ul>
+  </div>
+</div>
+<footer>
+  <div class="footerInner">
+    <div class="footerA">
+      <img src="./img/logo-2.png" alt="">
+      <div class="footerA-textBox">
+          <h4>Company/CEO</h4>
+          <p>SMC INTERNATIONAL CO., LTD. / Minchang Shin, Hanna Choi</p>
+          <h4>Address</h4>
+          <p>155 Bangbae Jungang-ro, Seocho-gu, Seoul</p>
+          <h4>Customer Service</h4>
+          <p>1644 - 2927</p>
+          <h4>Registration Number</h4>
+          <p>719 - 86 - 00092</p>
+      </div>
+    </div>
+    <div class="footerB">
+      <h1>FOLLOW US</h1>
+      <ul class="footerMenu">
+        <li><a href="javascript:void(0);"><p class="fa-brands fa-instagram"></p></a></li>
+        <li><a href="javascript:void(0);"><p class="fa-brands fa-facebook-f"></p></a></li>
+        <li><a href="javascript:void(0);"><p class="fa-brands fa-youtube"></p></a></li>
+        <li><a href="javascript:void(0);"><p class="fa-brands fa-tiktok"></p></a></li>
+      </ul>
+      <h1>Contact us</h1>
+      <p class="mail"><i class="fa-regular fa-envelope"></i> dessert39@smcinternational.co.kr</p>
+      <a href="#" class="b">제휴제안 문의하기 <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <div class="footerC">
+    <p>TM & Copyright 2022 DESSERT 39. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

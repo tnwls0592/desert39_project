@@ -1,0 +1,373 @@
+* {
+    padding: 0; margin: 0;
+}
+a {
+    color: inherit; text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.inner {width: 1280px; margin: 0 auto;}
+.clearFix::after,
+.clearFix::before {
+    content: ''; clear: both; display: block;
+}
+:root {
+    --main-color: #036d40;
+}
+header {background: #fff; width: 100%; height: 100px; outline: 5px solid #fff; position: fixed; top: 0; left: 0; z-index: 3;}
+header .menu {
+    display: flex; max-width: 1280px; margin: 0 auto; flex-wrap: wrap; height: 100px; background: #fff;
+}
+header .menu>a {
+    display: block; width: 100px; height: 100px;
+}
+header .menu>a img {width: 75px; height: 75px; padding: 15px;}
+header .user-menu {
+    height: 50px; display: flex; width: 1180px; justify-content: flex-end;
+}
+header .user {display: flex;}
+header .user>li>a {
+    display: block; padding-left: 5px; color: #888; transition-duration: .5s; padding-top: 25px;
+}
+header .user>li>a:last-child {
+    padding-right: 55px;
+}
+header .user>li>a svg {height: 20px; width: auto;}
+header .user>li:hover>a {
+    color: #000; transform: scale(1.2);
+}
+header .main-menu {display: flex; text-align: center; justify-content: flex-end; height: 50px;}
+header .main-menu>li {
+    width: calc(100%/5);
+}
+header .main-menu>li:first-child {padding-left: 150px;}
+header .main-menu>li>a {
+    display: block; line-height: 50px; font-weight: bold;
+}
+header .main-menu>li .sub-menu {
+    position: absolute; background: #fff; width: 100%; left: 0; top: 100px; display: flex; display: none; z-index: 100; border-top: 1px solid #ccc;
+}
+header .main-menu>li>.sub-menu .inner ul {
+    width: calc(1030px/5); float: right;
+}
+
+header .main-menu>li>.sub-menu ul li a {
+    display: block; line-height: 50px; font-size: 14px;
+}
+header .main-menu>li>.sub-menu ul li a:hover {
+    text-decoration: underline; font-weight: bold;
+}
+
+.badge .badge01 {
+    position: fixed; top: 38%; right: 10px; z-index: 3; width: 75px; height: 75px; border-radius: 50%; background: #ccc;
+}
+.badge .badge02 {
+    position: fixed; top: 50%; right: 10px; z-index: 3; width: 75px; height: 75px; border-radius: 50%; background: #ccc; 
+}
+.badge .badge03 {
+    position: fixed; top: 62%; right: 10px; z-index: 3; width: 75px; height: 75px; border-radius: 50%; background: #ccc; 
+}
+.badge .badge01 .badge01-01 {color: #fff; display: flex; flex-direction: column; padding-top: 17.5px;}
+.badge .badge02 .badge02-02 {color: #fff; display: flex; flex-direction: column; padding-top: 17.5px;}
+.badge .badge03 .badge03-03 {color: #fff; display: flex; flex-direction: column; padding-top: 17.5px;}
+.badge .badge01 h1 {
+    text-align: center; color: #fff; font-size: 16px;
+}
+.badge .badge02 h1 {
+    text-align: center; color: #fff; font-size: 16px;
+}
+.badge .badge03 h1 {
+    text-align: center; color: #fff; font-size: 16px;
+}
+
+#slide {
+    height: 750px; overflow: hidden; padding-top: 100px;
+}
+#slide ul {
+    width: 300%; height: 750px; position: relative;
+}
+#slide ul li {
+    width: 1920px; height: 750px; float: left;
+}
+#slide ul li a img {
+    height: 750px; width: 1920px;
+}
+#slide .textBoxInner {
+    max-width: 1280px; margin: 0 auto; position: relative;
+}
+#slide .textBox {
+    position: absolute; top: 120px; left: 0; color: #fff;
+}
+#slide .textBox h1 {
+    padding: 30px 0; font-size: 50px;
+}
+#slide .textBox p {
+    font-size: 20px;
+}
+#slide .textBox h4 {
+    font-size: 22px;
+}
+
+#container {
+    max-width: 1280px; margin: 0 auto;
+}
+.conA {
+    display: flex; justify-content: space-between;
+}
+#container>h1 {
+    text-align: center; padding: 25px 0; padding-top: 100px; font-size: 40px;
+}
+.conA .conA-01 {
+    border-right: 1px solid #ccc; padding-right: 40px;
+}
+.conA .conA-01 img,
+.conA .conA-02 img {
+    width: 600px; border-radius: 50px 0 50px 0; box-shadow: 5px 5px 5px #ccc;
+}
+.conA .conA-01 h2,
+.conA .conA-02 h2 {
+    padding-top: 20px;
+}
+.conA .conA-01 p,
+.conA .conA-02 p {
+    padding: 20px 0;
+}
+.conA .conA-01 a,
+.conA .conA-02 a {
+    border: 1px solid #000; border-radius: 20px; display: block; width: 100px; height: 25px; text-align: center; line-height: 25px;
+}
+.conA .conA-01 a:hover,
+.conA .conA-02 a:hover {
+    color: #fff; background: #000;
+}
+.conA .conA-02 {
+    padding-bottom: 30px;
+}
+
+.conB {
+    background: #f8f8f8; width: 100%; position: absolute; top: 1700px; left: 0; height: 650px;
+}
+.conB-inner {
+    display: flex; justify-content: space-between; padding-bottom: 50px; margin: 50px 0; padding-top: 50px; height: 700px; margin: 0 auto; width: 1280px;
+}
+.conB-01 h2 {
+    padding-top: 50px; font-size: 40px;
+}
+.conB-01 p {
+    padding: 30px 0;
+}
+.conB-01 a {
+    display: block; width: 100px; height: 25px; border: 1px solid #000; text-align: center; line-height: 25px; border-radius: 20px;
+}
+.conB-01 a:hover {
+    background: #000; color: #fff;
+}
+.conB-02 {
+    border: 2px solid #ccc; display: flex; align-items: center; box-sizing: border-box; width: 780px; height: 550px; border-radius: 20px; box-shadow: 5px 5px 5px #ccc; background: #fff;
+}
+.conB-02 svg {
+    width: 50px; height: 50px; padding: 20px; color: #ccc;
+}
+.conB-02 svg:hover {
+    color: #000;
+}
+.conB-02 ul {
+    width: 700%; height: 550px; display: flex; position: relative; overflow: hidden;
+}
+.conB-02 ul li a {
+    display: block; width: 630px; height: auto; display: flex; flex-direction: column;
+}
+.conB-02 ul li a img {
+    width: 450px; height: auto; margin: 0 auto; padding-top: 20px;
+}
+.conB-02 ul li a p {
+    font-size: 18px; font-weight: bold; padding: 20px 0;text-align: center; margin: 0 auto;
+}
+
+.conC {
+    margin-top: 800px;
+}
+.conC h1 {
+    text-align: center; padding-bottom: 25px; font-size: 40px;
+}
+.conC swiper-container {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+.conC swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 35px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 600px;
+}
+.conC swiper-slide p:nth-child(2) {
+    padding: 10px 0; padding-top: 20px;
+}
+.conC swiper-slide p:nth-child(2):hover {
+    font-weight: 700;
+}
+.conC swiper-slide p:nth-child(3) {
+    color: #888; font-size: 14px;
+}
+
+.conC swiper-slide img {
+    display: block;
+    width: 270px;
+    height: 410px;
+    object-fit: cover;
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px #ccc;
+}
+.conC swiper-slide img:hover {
+    transform: scale(1.1);
+}
+.conC a {
+    display: block; width: 100px; height: 25px; border: 1px solid #000; text-align: center; line-height: 25px; border-radius: 20px; margin: 0 auto;
+}
+.conC a:hover {
+    background: #000; color: #fff;
+}
+
+.conD>h1 {
+    text-align: center; padding: 30px 0; font-size: 40px; padding-top: 100px;
+}
+.conD .conD-01-01 p {padding-bottom: 30px;}
+.conD-01 {
+    display: flex; justify-content: space-between;
+}
+.conD-01-01 {
+    display: flex; flex-direction: column;
+}
+.conD-img {
+    width: 780px; height: 500px; overflow: hidden; position: relative;
+}
+.conD-01-01 h4 {
+    padding-top: 50px;
+}
+.conD-01-01 h1 {
+    padding: 30px 0;
+}
+.conD .conD-01-02 .conD-img a {
+    display: block; box-shadow: 5px 5px 5px #ccc; outline: 2px solid red; border-radius: 50px 0 0 0; width: 780px; height: 500px;
+}
+.conD .conD-01-02 img {
+    height: 500px; border-radius: 50px 0 0 0; display: block;
+}
+.conD-01-02 h4 {
+    position: absolute; top: 0; left: 0; z-index: 1; color: #fff; font-size: 30px; padding: 50px 0 0 50px;
+}
+.conD-01-02 p {
+    position: absolute; top: 140px; left: 0; z-index: 1; color: #fff; padding: 50px 0 0 50px;
+}
+
+.conD .conD-01-01 a {
+    border: 1px solid #000; border-radius: 20px; display: block; width: 100px; height: 25px; text-align: center; line-height: 25px;
+}
+.conD .conD-01-01 a:hover {
+    background: #000; color: #fff;
+}
+
+.conE h1 {
+    text-align: center; padding: 25px 0; font-size: 40px; padding-top: 100px;
+}
+
+.conE {max-width: 1280px; margin: 0 auto; overflow: hidden;}
+.conE p {text-align: center; padding-bottom: 25px;}
+.conE>a {text-align: center; display: block; border: 1px solid #000; border-radius: 20px; width: 100px; height: 25px; line-height: 25px; margin: 0 auto;}
+.conE>a:hover {background: #000; color: #fff;}
+.conE .slide {display: flex; padding-bottom: 30px; width: 200%; height: 300px; padding-top: 30px;}
+.conE .slide li a {display: block; display: flex; width: 300px; margin-right: 25px; box-shadow: 5px 5px 5px #ccc; position: relative;}
+.conE .slide li a img {width: 300px; height: 300px; display: block; position: relative;}
+.conE .slide li a img:hover {color: currentColor; opacity: .5;}
+.icon-box {display: flex; position: absolute; top: 47%; left: 35%; font-size: 25px; width: 100px; justify-content: space-around; align-items: center; display: none; z-index: 2;}
+
+footer {
+    background: #ccc; height: 325px; margin-top: 100px;
+}
+.footerInner {
+    max-width: 1280px; margin: 0 auto; display: flex; padding-top: 25px; padding-bottom: 25px; justify-content: space-between;
+}
+footer ul {
+    display: flex;
+}
+footer ul li {
+    padding: 0 10px; font-size: 20px;
+}
+.footerA {
+    display: flex;
+}
+.footerA img {
+    height: 25px; width: auto;
+}
+.footerA .footerA-textBox {
+    padding-left: 25px; display: flex; flex-direction: column;
+}
+.footerA h4 {
+    padding-bottom: 5px;
+}
+.footerA p {
+    font-size: 12px; padding-bottom: 10px;
+}
+.footerA p:nth-child(4){
+    padding: 0;
+}
+.footerB {
+    display: flex; flex-direction: column; align-items: end;
+}
+.footerB .mail {padding-bottom: 10px;}
+.footerB .b {
+    background: #000; color: #fff; border-radius: 20px; width: 200px; height: 25px; text-align: center; line-height: 25px;
+}
+.footerB .b:hover {
+    border: 1px solid #000; color: #000; background: none; box-sizing: border-box;
+}
+.footerC {
+    text-align: center; border-top: 1px solid #aaaaaa; padding: 25px;
+}
+.footerC p {
+    font-size: 12px;
+}
+
+/* scrollMagic css */
+.back-to-position {
+    opacity: 0; transition: 1s;
+}
+.back-to-position.to-right {
+    transform: translateX(-150px);
+}
+.back-to-position.to-left {
+    transform: translateX(150px);
+}
+.show .back-to-position {
+    opacity: 1; transform: translateX(0);
+}
+.show .back-to-position.to-left {
+    opacity: 1; transition: 1s;
+}
+.show .back-to-position.to-right {
+    opacity: 1; transition: 1s;
+}
+/* 각 요소의 시간차 */
+.show .back-to-position.delay-0 {
+    transition-delay: 0s;
+}
+.show .back-to-position.delay-1 {
+    transition-delay: .3s;
+}
+.show .back-to-position.delay-2 {
+    transition-delay: .6s;
+}
+.show .back-to-position.delay-3 {
+    transition-delay: .9s;
+}
